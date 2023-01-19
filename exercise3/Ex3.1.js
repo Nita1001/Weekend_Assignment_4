@@ -21,3 +21,15 @@
 // nb_year(1500000, 2.5, 10000, 2000000) -> 10
 // Note: Don't forget to convert the percent parameter as a percentage in the body of your
 // function: if the parameter percent is 2 you have to convert it to 0.02.
+const nb_year = (p0, percent, aug, p) =>{
+    percent = percent /100;
+    let result = 0;
+    for(let i = 1; result < p; i++){
+        result += p0+ (percent * p0) + aug;
+        p0 = result;
+        years = i;
+    }
+    return years + 1;
+}
+console.log(nb_year(1000, 2, 50, 1070));
+  
