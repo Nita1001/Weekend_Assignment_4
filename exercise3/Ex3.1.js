@@ -25,14 +25,12 @@ const nb_year = (p0, percent, aug, p) =>{
     percent = percent /100;
     let result = 0;
     let year = 0;
-
     for( let i = 1 ; result < p ; i++){
         result = p0 + (percent * p0) + aug;
         p0 = Math.floor(result);
         year = i;
     }
-
     return year;
 }
-console.log(nb_year(1000, 2, 50, 1213));
+console.log(nb_year(1500000, 2.5, 10000, 2000000));
   
