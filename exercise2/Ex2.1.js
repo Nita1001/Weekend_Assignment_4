@@ -8,8 +8,8 @@ let arr = [10, 343445353, 3453445, 3453545353453];
 const sumOfLowestNums = (arr) => {
     arr.sort(function (a, b) {
         return a - b;
-    }) ;
-   const sum = arr[0]+arr[1];
-   return sum;
+    });
+    const sum = arr[0]+arr[1];
+    return sum;
 }
 console.log(sumOfLowestNums(arr));
