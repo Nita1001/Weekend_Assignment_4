@@ -7,3 +7,11 @@
 // 1 + 2
 // summation(8) -> 36
 // 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8
+const summation = (num) =>{
+    let sum = 0;
+    if(num < 0){
+        return num + 1;
+    }
+    return sum += num + summation(--num);
+}
+console.log(summation(8));
