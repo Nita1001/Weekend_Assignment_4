@@ -10,7 +10,7 @@
 // centuryFromYear(1601) returns (17)
 // centuryFromYear(2000) returns (20)
 const centuryCheck = (year) => {
-    const century = (year -1) / 100;
+    const century = ((year - 1) / 100) + 1;
     return Math.floor(century);
 }
-console.log(centuryCheck(199));
+console.log(centuryCheck(1701));
