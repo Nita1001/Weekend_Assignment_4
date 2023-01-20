@@ -12,3 +12,16 @@
 // Please keep in mind that the test cases ensure that the number of people in the bus is always
 // >= 0. So the return integer can't be negative.
 // The second value in the first integer array is 0, since the bus is empty in the first bus stop.
+let arr = [[3,0], [5,8], [1, 1], [4, 1], [4,1]];
+const bus = (passengers) => {
+    let count = 0;
+    passengers.forEach((item)=>{
+        count += item[0] - item[1];
+    });
+    if(count <= 0){
+        return count = 0;
+    }   else{
+        return count;
+    }
+}
+console.log(bus(arr));
