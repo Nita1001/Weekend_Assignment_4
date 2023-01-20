@@ -6,3 +6,19 @@
 // Examples
 // toCamelCase("the-stealth-warrior") // returns "theStealthWarrior"
 // toCamelCase("The_Stealth_Warrior") // returns "TheStealthWarrior"
+const toWeirdCase = (str) => {
+    let newStr = str.split('');
+    console.log(newStr);
+    for(let i = 0; i < str.length ; i++) {   
+
+        if(newStr[i] === '-' || newStr[i] === '_'){
+            newStr[i + 1] = newStr[i + 1].toUpperCase();
+            newStr[i] = ' ';
+        }
+    }
+    let newStr2 = newStr.join('');
+    newStr = newStr2.split(' ');
+    return newStr.join('');
+}
+console.log(toWeirdCase('the-stealth-warrior'));
+console.log(toWeirdCase('The_Stealth_Warrior'));
