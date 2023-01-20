@@ -18,14 +18,10 @@
 // return an empty array (except in C return NULL) and be ready for anything else which is not
 // clearly specified ;)
 const triBonacci = (n, arr) => {
-    if( (n >= 0) && (n < 3)){ 
-        return arr.slice(0, n)
-    }else {
         for(let i = 3; i < n; i++)
         {
             arr.push(arr[i - 1] + arr[i - 2] + arr[i - 3]);
         } 
-        return arr;
+        return arr.slice(0, n);
     }
-}
-console.log(triBonacci( 4, [1, 1, 1]));
+console.log(triBonacci( 0, [1, 1, 1]));
