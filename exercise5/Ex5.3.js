@@ -10,7 +10,6 @@ const toWeirdCase = (str) => {
     let newStr = str.split('');
     console.log(newStr);
     for(let i = 0; i < str.length ; i++) {   
-
         if(newStr[i] === '-' || newStr[i] === '_'){
             newStr[i + 1] = newStr[i + 1].toUpperCase();
             newStr[i] = ' ';
