@@ -9,3 +9,11 @@
 // Examples:
 // toWeirdCase( "String" );//=> returns "StRiNg"
 // toWeirdCase( "Weird string case" );//=> returns "WeIrD StRiNg CaSe"
+const toWeirdCase = (str) => {
+    let newStr = str.split('');
+    for(let i = 0; i < newStr.length; i++) {   
+        (i % 2 === 0) ? newStr[i] = newStr[i].toUpperCase(): newStr[i]= newStr[i].toLowerCase();
+    }
+    return newStr.join('');
+}
+console.log(toWeirdCase('Wired String Case'));
