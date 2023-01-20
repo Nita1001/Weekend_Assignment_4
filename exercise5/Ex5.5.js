@@ -8,7 +8,6 @@
 // Patrick Feeney => P.F6.6
 const initials = (str) => {
     let newStr = str.split('');
-    console.log(newStr);
     let nameInitials = newStr.shift().toUpperCase() + '.';
     newStr = str.split(' ');
     newStr.shift();
