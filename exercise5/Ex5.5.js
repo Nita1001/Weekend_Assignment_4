@@ -6,3 +6,15 @@
 // It should look like this:
 // Sam Harris => S.H
 // Patrick Feeney => P.F6.6
+const initials = (str) => {
+    let newStr = str.split('');
+    console.log(newStr);
+    let nameInitials = newStr.shift().toUpperCase() + '.';
+    newStr = str.split(' ');
+    newStr.shift();
+    let newStr2 = newStr.join('');
+    newStr = newStr2.split('')
+    nameInitials += newStr.shift().toUpperCase();
+    return nameInitials;
+}
+console.log(initials('nita jorjoliani'));
