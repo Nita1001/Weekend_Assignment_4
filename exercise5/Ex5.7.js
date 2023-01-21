@@ -10,6 +10,6 @@ const shortest = (str) => {
     let lengthOfShortestWord = Math.min(...lengths);
     let index = lengths.indexOf(lengthOfShortestWord);
     let word = newStr[index];
-    return word;
+    return lengthOfShortestWord;
 }
 console.log(shortest(str));
