@@ -9,7 +9,16 @@
 // maskify( "64607935616") == "#######5616"
 // maskify( "1") == "1"
 // maskify( "") == ""
-// // "What was the name of your first pet?"
 // maskify("Skippy") == "##ippy"
 // maskify("Nananananananananananananananana Batman!") ==
 // "####################################man!"
+let str = '4556364607935616';
+const maskify = (str) => {
+    let newStr = str.split('');
+    for(let i = 0; i < str.length - 4; i++) {
+         newStr[i] = newStr[i].replace(newStr[i], '#'); 
+    }
+    newStr = newStr.join('');
+    return newStr;
+}
+console.log(maskify(str));
