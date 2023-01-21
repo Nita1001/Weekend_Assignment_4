@@ -6,3 +6,9 @@
 // islsogram("Dermatoglyphics") ==true
 // islsogram("aba") ==false
 // islsogram("moOse") ==false // -- ignore letter case
+function islsogram(str){
+    return str.toLowerCase().split('').filter((element, index, arr)=> arr.indexOf(element) == index).length == str.length;
+   }
+   console.log(islsogram("Dermatoglyphics"));
+   console.log(islsogram('aba'));
+   console.log(islsogram('moOse'));
