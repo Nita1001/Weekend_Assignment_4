@@ -12,3 +12,18 @@
 // "Indivisibilities" -> 2 #'i' occurs seven times and 's' occurs twice
 // "aA11" -> 2 #'a' and '1'
 // "ABBA" -> 2 #'A' and 'B' each occur twice
+const duplicates = (str) => {
+    return str.split("").reduce(
+        (acc, element) => {
+            acc[element] = (acc[element] || 0) + 1;
+            if (acc[element] === 2) {
+                acc.count++; //==
+            }
+            return acc;
+        },
+        { count: 0 }
+    ).count;
+};
+
+let str = "aaabbbcde";
+console.log(duplicates(str));
